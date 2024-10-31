@@ -5,12 +5,11 @@ import Loader from "./Loader";
 
 function AppLayout() {
   const navigation = useNavigation();
+  console.log(<Outlet />);
   const isLoading = navigation.state === "loading";
-  console.log(navigation);
   return (
     <div className="grid-rows-[auto_1fr_auto] h-screen grid  ">
       {isLoading && <Loader />}
-      {/* <Loader /> */}
       <Header />
       <div className="my-10 overflow-scroll">
         <main className="mx-auto max-w-3xl ">
